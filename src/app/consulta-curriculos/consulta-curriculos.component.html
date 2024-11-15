@@ -1,0 +1,15 @@
+<h1 style="padding: 20px; font-family: Arial, Helvetica, sans-serif;">Consulta de Curriculos</h1>
+
+<div class="curriculo" *ngFor="let pessoa of pessoas">
+
+
+  <div style="flex-basis: 100%;">
+    <h3>Nome: {{pessoa.nome}}</h3>
+    <p>Genero: {{pessoa.genero}}</p>
+    <p>Objetivo: {{pessoa.objetivo}}</p>
+  </div>
+
+  <!-- <p>Ultima Experiencia: Desenvolvedor de Software - CWI SOFtware</p>
+  <p>Data Ultima experiencia: Trabalho atual</p> -->
+  <button class="btn btn-secoundary" (click)="verEmDetalhes(pessoa.id)" style="flex-grow: 12;">Ver em detalhes</button>
+</div>

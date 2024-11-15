@@ -1,0 +1,20 @@
+<div class="dados" *ngIf="curriculo !== undefined">
+  <h1>Dados Pessoais</h1>
+  <h3>Nome: {{curriculo.cadastroPessoal.nome}}</h3>
+  <p>Data nascimento: {{curriculo.cadastroPessoal.dtNascimento | date}}</p>
+  <p>Genero: {{curriculo.cadastroPessoal.genero}}</p>
+  <p>Objetivo {{curriculo.cadastroPessoal.objetivo}}</p>
+
+  <h1>Experiências</h1>
+  <div *ngFor="let item of curriculo.experiencias" class="experiencia">
+    <h3>{{item.nomeExp}}</h3>
+    <h3>{{item.empresa}}</h3>
+    <p>Descrição: {{item.desc}}</p>
+    <p>Inicio: {{item.dtInicio | date}}</p>
+    <p>Fim: {{item.dtFim === null ? item.dtFim : 'Trabalho atual'}}</p>
+  </div>
+</div>
+
+<div *ngIf="curriculo === undefined">
+  <app-not-found></app-not-found>
+</div>

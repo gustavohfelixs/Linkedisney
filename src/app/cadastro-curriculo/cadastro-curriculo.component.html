@@ -1,0 +1,31 @@
+<div>
+  <form [formGroup]="options">
+    <h1>Cadastro Pessoal</h1>
+    <div>
+      <label for="nome">Nome Completo</label>
+      <input type="text" name="nome" id="nome" formControlName="nome" placeholder="Gustavo Henrique">
+    </div>
+    <div>
+      <label for="nome">CPF</label>
+      <input type="text" name="cpf" id="cpf" formControlName="cpf" placeholder="xxx.xxx.xxx-xx">
+    </div>
+    <div>
+      <label for="dtNascimento">Data Nascimento</label>
+      <input type="date" name="dtNascimento" id="dtNascimento" formControlName="dtNascimento">
+    </div>
+    <div>
+      <label for="genero">Genero</label>
+      <input type="text" name="genero" id="genero" formControlName="genero">
+    </div>
+    <div>
+      <label for="objetivo">Objetivo</label>
+      <input type="text" name="objetivo" id="objetivo" formControlName="objetivo" placeholder="Analista Pleno">
+    </div>
+  </form>
+
+
+  <div>
+    <app-experiencia-form [cadastroPessoal]="options"></app-experiencia-form>
+  </div>
+
+</div>

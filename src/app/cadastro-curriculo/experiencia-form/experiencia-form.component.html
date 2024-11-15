@@ -1,0 +1,49 @@
+<div>
+
+  <form [formGroup]="experienciaForm" (ngSubmit)="onSubmit()">
+
+    <div formArrayName="experiencias">
+      <h1 style="padding: 0px 15px;">Experiências</h1>
+
+      <div *ngFor="let experiencia of experiencias.controls; let i = index" [formGroupName]="i" class="experiencia-form" class="experiencia-form">
+
+        <div style="display: flex; gap: 15px 20px">
+
+          <div>
+            <label for="nomeExp">Nome da Experiência</label>
+            <input id="nomeExp" formControlName="nomeExp" placeholder="Desenvolvedor Backend" />
+          </div>
+
+          <div>
+            <label for="empresa">Empresa</label>
+            <input id="empresa" formControlName="empresa" placeholder="CWI Software" />
+          </div>
+        </div>
+
+        <div>
+          <label for="dtInicio">Data de Início</label>
+          <input id="dtInicio" type="date" formControlName="dtInicio" />
+        </div>
+
+        <div>
+          <label for="dtFim">Data de Fim</label>
+          <input id="dtFim" type="date" formControlName="dtFim" />
+        </div>
+
+        <div>
+          <label for="desc">Descrição</label>
+          <textarea id="desc" formControlName="desc" placeholder="Pude colaborar com equipes e ..."></textarea>
+        </div>
+
+
+        <button type="button" (click)="removerExperiencia(i)">Remover</button>
+        <button type="button" style="background-color: #007bff;" (click)="adicionarExperiencia()">Adicionar Experiência</button>
+      </div>
+    </div>
+
+    <div style="text-align: end;">
+
+      <button [disabled]="!(experienciaForm.valid && cadastroPessoal.valid)" type="submit" style="padding: 10px 100px; text-align: end;">Salvar Cadastro</button>
+    </div>
+  </form>
+</div>
