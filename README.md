@@ -1,27 +1,48 @@
 # Linkedisney
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+### Introduction
 
-## Development server
+> Linkedisney a simple CRUD operation with Angular And Java Spring for my graduation in SENAI School. Angular make http requests to Java that save information in a H2 Database (SQL Database of Spring Framework).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Pre-requirements**
 
-## Code scaffolding
+- JAVA 17
+- Maven 3.3+
+- Angular 18
+- Your favorite IDEA
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Run
 
-## Build
+Run the command
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+npm run start
+```
 
-## Running unit tests
+## Backend
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The Backend is in Java
 
-## Running end-to-end tests
+### Installing dependencies:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+mvn clean install
+```
 
-## Further help
+### Clean and Build
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```
+mvn clean package
+```
+
+### Executing the project
+
+```
+mvn spring-boot:run
+```
+
+Ou
+
+```
+java -jar ./target/App-0.0.1-SNAPSHOT.jar
+```
